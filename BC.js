@@ -3,15 +3,17 @@
 let mainNumber = prompt("Введите 4-хзначное число без повторяющихся цифр:");
 let checkNumber = prompt("Введите проверочное число:");
 
-alert(searchOfCoinsedence(mainNumber, checkNumber));
-
 if ((getCategoryOfNumber(mainNumber) !== getCategoryOfNumber(checkNumber)) 
 	|| (searchRepeatingNumbers(mainNumber))
 	|| (searchRepeatingNumbers(checkNumber))) {
 	alert("Число содержит неверное количество цифр!");
 } else {
-	
+	alert(searchOfCoinsedence(mainNumber, checkNumber));
+	alert(searchOfBulls(mainNumber, checkNumber));
+	alert(searchOfCows(mainNumber, checkNumber));
 };
+
+
 
 function searchRepeatingNumbers(number) {
 	let lastNumber = getLastNumber(number);
@@ -74,7 +76,7 @@ function searchOfCoinsedence(mainNumber, checkNumber) {
 		for ( ; copyMainNumber > 0; ) {
 
 			if (getLastNumber(copyCheckNumber) === getLastNumber(copyMainNumber)) {
-				numberOfBulls++;
+				numberOfCoinsedence++;
 			};
 
 			copyMainNumber = deleteLastNumber(copyMainNumber);
