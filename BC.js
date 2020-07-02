@@ -1,15 +1,10 @@
 "use strict";
 
-// let mainNumber = prompt("Введите 4-хзначное число без повторяющихся цифр:", 1234);
-// let checkNumber = prompt("Введите проверочное число:");
-
-// for (let i = 0; i < 10; i++) {
-	console.log(searchCoincedence(1234, 7) || searchCoincedence(80, 7));
-// 	console.log("");
-// };
+let mainNumber = prompt("Введите 4-хзначное число без повторяющихся цифр:", 1234);
+let checkNumber = prompt("Введите проверочное число:");
 
 
-/*if ((mainNumber != Number(mainNumber))
+if ((mainNumber != Number(mainNumber))
 		|| (checkNumber != Number(checkNumber))) {
 
 		alert("Введены не числа!");
@@ -23,13 +18,10 @@
 	alert("Число содержит неверное количество цифр!");
 
 	} else {
-		alert(quantityOfCoinсedence(mainNumber, checkNumber));
-		alert(searchCoincedence(mainNumber, checkNumber));
-	
 		alert(quantityOfBulls(mainNumber, checkNumber));
 		alert(quantityOfCows(mainNumber, checkNumber));
 	};
-};*/
+};
 
 
 /*	alert(searchCoincedence(mainNumber, checkNumber));
@@ -39,8 +31,8 @@
 
 
 function searchRepeatingNumbers(number) {
-	let lastNumber = getLastNumber(number);
-	let nextNumber = deleteLastNumber(number);
+	let lastDigit = getLastDigit(number);
+	let nextNumber = deleteLastDigit(number);
 	let cuttedNumber;
 
 	for ( ; nextNumber > 0 ; ) {
@@ -48,28 +40,28 @@ function searchRepeatingNumbers(number) {
 
 		for ( ; cuttedNumber > 0 ; ) {
 
-			if (lastNumber === getLastNumber(cuttedNumber)) {
+			if (lastDigit === getLastDigit(cuttedNumber)) {
 				return true;
 			};
 
-			cuttedNumber = deleteLastNumber(cuttedNumber);
+			cuttedNumber = deleteLastDigit(cuttedNumber);
 		};
 
-		lastNumber = getLastNumber(nextNumber);
-		nextNumber = deleteLastNumber(nextNumber);
+		lastDigit = getLastDigit(nextNumber);
+		nextNumber = deleteLastDigit(nextNumber);
 	};
 
 	return false;
 };
 
 
-function getLastNumber(number) {
+function getLastDigit(number) {
 	let variable = number/10;
 	let variable2 = Math.trunc(variable);
 	let variable3 = variable - variable2;
-	let lastNumber = Math.round(variable3*10);
+	let lastDigit = Math.round(variable3*10);
 
-	return lastNumber;
+	return lastDigit;
 };
 
 
@@ -86,7 +78,7 @@ function getCategoryOfNumber(number) {
 };
 
 
-function deleteLastNumber(number) {
+function deleteLastDigit(number) {
 	let returnedNumber;
 	if (number === 0) {
 		return NaN;
@@ -105,19 +97,32 @@ function searchCoincedence(mainNumber, checkNumber) {
 		return false;
 	};*/
 
-	for ( ; copyCheckNumber >= 0; ) {
+	for ( ; copyCheckNumber > 0; ) {
 
 		for ( ; copyMainNumber > 0; ) {
 
-			if (getLastNumber(copyCheckNumber) === getLastNumber(copyMainNumber)) {
+			if (getLastDigit(copyCheckNumber) === getLastDigit(copyMainNumber)) {
 				return true;
 			};
 
-			copyMainNumber = deleteLastNumber(copyMainNumber);
+			copyMainNumber = deleteLastDigit(copyMainNumber);
 		};
 
-		copyCheckNumber = deleteLastNumber(copyCheckNumber);
+		copyCheckNumber = deleteLastDigit(copyCheckNumber);
 		copyMainNumber = mainNumber;
+	};
+
+	if (checkNumber === 0) {
+
+		for ( ; copyMainNumber > 0; ) {
+
+			if (getLastDigit(copyMainNumber) === 0) {
+				return true;
+			};
+
+			copyMainNumber = deleteLastDigit(copyMainNumber);
+		};
+
 	};
 
 	return false;
@@ -133,14 +138,14 @@ function quantityOfCoinсedence(mainNumber, checkNumber) {
 
 		for ( ; copyMainNumber > 0; ) {
 
-			if (getLastNumber(copyCheckNumber) === getLastNumber(copyMainNumber)) {
+			if (getLastDigit(copyCheckNumber) === getLastDigit(copyMainNumber)) {
 				coinсedenceQuantity++;
 			};
 
-			copyMainNumber = deleteLastNumber(copyMainNumber);
+			copyMainNumber = deleteLastDigit(copyMainNumber);
 		};
 
-		copyCheckNumber = deleteLastNumber(copyCheckNumber);
+		copyCheckNumber = deleteLastDigit(copyCheckNumber);
 		copyMainNumber = mainNumber;
 	};
 
@@ -155,12 +160,12 @@ function quantityOfBulls(mainNumber, checkNumber) {
 
 	for ( ; copyMainNumber > 0; ) {
 
-		if (getLastNumber(copyCheckNumber) === getLastNumber(copyMainNumber)) {
+		if (getLastDigit(copyCheckNumber) === getLastDigit(copyMainNumber)) {
 			quantityOfBulls++;
 		};
 
-		copyMainNumber = deleteLastNumber(copyMainNumber);
-		copyCheckNumber = deleteLastNumber(copyCheckNumber);
+		copyMainNumber = deleteLastDigit(copyMainNumber);
+		copyCheckNumber = deleteLastDigit(copyCheckNumber);
 	};
 
 	return quantityOfBulls;
