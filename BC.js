@@ -3,10 +3,10 @@
 // let mainNumber = prompt("Введите 4-хзначное число без повторяющихся цифр:", 1234);
 // let checkNumber = prompt("Введите проверочное число:");
 
-/*for (let i = 0; i < 10; i++) {
-	console.log(generateWithout(mainNumber));
-	console.log("");
-};*/
+// for (let i = 0; i < 10; i++) {
+	console.log(searchCoincedence(1234, 7) || searchCoincedence(80, 7));
+// 	console.log("");
+// };
 
 
 /*if ((mainNumber != Number(mainNumber))
@@ -77,12 +77,10 @@ function getCategoryOfNumber(number) {
 	let i = 0;
 	let copyOfNumber = number;
 
-	while (copyOfNumber >= 10) {
+	while (copyOfNumber >= 1) {
 		i++;
 		copyOfNumber/= 10;
 	};
-
-	i++;
 
 	return i;
 };
@@ -180,13 +178,13 @@ function generateRandom() {
 	let indicator;
 
 	while (getCategoryOfNumber(returnedNumber) !== 4) {
-		let newNumber = Math.floor( Math.random() * 10 );
+		let newDigit = Math.floor( Math.random() * 10 );
 
-		indicator = searchCoincedence(returnedNumber, newNumber);
+		indicator = searchCoincedence(returnedNumber, newDigit);
 
 		if (!(indicator)) {
 
-			returnedNumber = returnedNumber * 10 + newNumber;
+			returnedNumber = returnedNumber * 10 + newDigit;
 
 		};
 	};
@@ -201,14 +199,14 @@ function generateWithout(cuttedDigits) {
 	let indicator;
 
 	while (getCategoryOfNumber(returnedNumber) !== 4) {
-		let newNumber = Math.floor( Math.random() * 10 );
-		console.log(newNumber);
-		indicator = searchCoincedence(cuttedDigits, newNumber) || searchCoincedence(returnedNumber, newNumber);
+		let newDigit = Math.floor( Math.random() * 10 );
+		console.log(newDigit);
+		indicator = searchCoincedence(cuttedDigits, newDigit) || searchCoincedence(returnedNumber, newDigit);
 		console.log(indicator);
 
 		if (!(indicator)) {
 
-			returnedNumber = returnedNumber * 10 + newNumber;
+			returnedNumber = returnedNumber * 10 + newDigit;
 			
 		};
 
