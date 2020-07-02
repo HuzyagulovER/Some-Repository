@@ -1,9 +1,13 @@
 "use strict";
 
-let mainNumber = prompt("Введите 4-хзначное число без повторяющихся цифр:", 1234);
+// let mainNumber = prompt("Введите 4-хзначное число без повторяющихся цифр:", 1234);
 // let checkNumber = prompt("Введите проверочное число:");
 
-alert(generateWithout(mainNumber));
+/*for (let i = 0; i < 10; i++) {
+	console.log(generateWithout(mainNumber));
+	console.log("");
+};*/
+
 
 /*if ((mainNumber != Number(mainNumber))
 		|| (checkNumber != Number(checkNumber))) {
@@ -85,15 +89,25 @@ function getCategoryOfNumber(number) {
 
 
 function deleteLastNumber(number) {
-	return Math.floor(number/10);
+	let returnedNumber;
+	if (number === 0) {
+		return NaN;
+	} else {
+		return Math.floor(number/10);
+	};
+
 };
 
 
 function searchCoincedence(mainNumber, checkNumber) {
-	let copyCheckNumber = checkNumber;
 	let copyMainNumber = mainNumber;
+	let copyCheckNumber = checkNumber;
 
-	for ( ; copyCheckNumber > 0; ) {
+/*	if (!(mainNumber || checkNumber)) {
+		return false;
+	};*/
+
+	for ( ; copyCheckNumber >= 0; ) {
 
 		for ( ; copyMainNumber > 0; ) {
 
@@ -162,7 +176,7 @@ function quantityOfCows(mainNumber, checkNumber) {
 
 
 function generateRandom() {
-	let returnedNumber = 0;
+	let returnedNumber;
 	let indicator;
 
 	while (getCategoryOfNumber(returnedNumber) !== 4) {
@@ -185,19 +199,20 @@ function generateRandom() {
 function generateWithout(cuttedDigits) {
 	let returnedNumber = 0;
 	let indicator;
-	let newNumber = 1;
 
 	while (getCategoryOfNumber(returnedNumber) !== 4) {
-
-		indicator = searchCoincedence(cuttedDigits, newNumber);
+		let newNumber = Math.floor( Math.random() * 10 );
+		console.log(newNumber);
+		indicator = searchCoincedence(cuttedDigits, newNumber) || searchCoincedence(returnedNumber, newNumber);
+		console.log(indicator);
 
 		if (!(indicator)) {
 
 			returnedNumber = returnedNumber * 10 + newNumber;
-
+			
 		};
 
-		newNumber++;
+		console.log(returnedNumber);
 	};
 
 	return returnedNumber;
