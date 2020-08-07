@@ -1,28 +1,129 @@
-.box {
-  width: 100px;
-  height: 100px;
-  margin: 50px;
-  border: 5px solid black;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+/* Обнуление */
+*, *:before, *:after {
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
-* .btn-1 {
-  background-color: #bf4040;
+.css3 {
+  height: 500px;
+  background-color: #000;
 }
-* .btn-2 {
-  background-color: #a6bf40;
+
+.css3 .contain {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
 }
-* .btn-3 {
-  background-color: #40bf73;
+
+.css3 .wave-btn {
+  width: 250px;
+  height: 60px;
+  border-radius: 10px;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  position: relative;
+
+  overflow: hidden;
 }
-* .btn-4 {
-  background-color: #4073bf;
+
+.css3 .wave-btn:hover .b-waves{
+  top: -50px;
 }
-* .btn-5 {
-  background-color: #a640bf;
+
+.css3 .b-text {
+  font-family: "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+  letter-spacing: 5px;
+}
+
+.css3 .b-waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  background-color: #125CE4;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+
+  transition: all 1s ease 0s;
+}
+
+.css3 .b-waves:after,
+.css3 .b-waves:before {
+  content: "";
+  position: absolute;
+  width: 250%;
+  height: 250%;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+}
+
+.css3 .b-waves:before {
+  background-color: #000;
+  border-radius: 48%;
+
+  -webkit-animation: wave 5s infinite linear;
+  -o-animation: wave 5s infinite linear;
+  animation: wave 5s infinite linear;
+}
+
+.css3 .b-waves:after {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 45%;
+
+  -webkit-animation: wave 10s infinite linear;
+  -o-animation: wave 10s infinite linear;
+  animation: wave 10s infinite linear;
+}
+
+@keyframes wave {
+  0%{
+    transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+  }
+  100%{
+     transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+  }
+}
+
+.css3 .circle {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+
+  transition: all 0.05s linear 0s;
+}
+
+.css3 .wave-btn:active .circle {
+  width: 500px;
+  height: 250px;
 }
 
 /*# sourceMappingURL=css3.css.map */

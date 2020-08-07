@@ -1,12 +1,11 @@
 .css2 {
-	min-height: 500px;
 }
 
 .css2 .btn {
 	padding: 10px 15px;
 }
 
-/* .css2 .btn-1 {
+.css2 .btn-1 {
 	background-color: hsl(0, 100%, 50%);
 }
 
@@ -30,4 +29,7 @@
 	background-color: hsl(288, 100%, 50%);
 	transform: scale(1.1);
 }
- */
+
+.css2 .btn-3 {
+	background-color: #00BEF1;
+}
