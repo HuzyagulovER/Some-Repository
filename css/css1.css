@@ -1,4 +1,4 @@
-* {
+.css1 {
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -6,42 +6,42 @@ body {
 	min-height: 3000px;
 }
 
-p {
+.css1 p {
 	display: block;
 }
 
-.navbar {
+.css1 .navbar {
 	
 }
 
-.header {
+.css1 .header {
 	background: hsl(195, 87%, 51%);
-	position: absolute;
+	position: relative;
 	width: 100%;
 }
 
-.navbar {
+.css1 .navbar {
 	min-height: 70px;
 }
 
-.contain {
+.css1 .contain {
 	padding-right: 15px;
 	padding-left: 15px;
 }
  
-.header-text {
+.css1 .header-text {
 	position: relative;
 	max-width: 680px;
 	margin: 70px auto 90px;
 }
 
-.header-text h2 {
+.css1 .header-text h2 {
 	font-weight: 700;
 	font-size: 98px;
 
 }
 
-.header-text h3 {
+.css1 .header-text h3 {
 	font-family: 'Lato', sans-serif;
 	margin-bottom: 30px;
 	font-weight: 400;
@@ -49,27 +49,27 @@ p {
 	letter-spacing: normal;
 }
 
-.white {
+.css1 .white {
 	color: #fff !important;
 }
 
-.dark-blue {
+.css1 .dark-blue {
 	color: hsl(195, 87%, 21%);
 }
 
-.orange {
+.css1 .orange {
 	color: hsl(44, 84%, 59%);
 }
 
-.bg-dark-blue {
+.css1 .bg-dark-blue {
 	background-color: hsl(195, 87%, 21%);
 }
 
-.bg-orange {
+.css1 .bg-orange {
 	background-color: hsl(44, 84%, 59%);
 }
 
-.header-text a {
+.css1 .header-text a {
 	margin: 0 7px;
 	height: auto;
 	font-family: 'Montserrat', arial, sans-serif;
@@ -79,44 +79,49 @@ p {
 	text-transform: uppercase;
 }
 
-.links {
+.css1 .links {
 	text-align: center;
 	margin-bottom: 20px;
 }
 
-.links p {
+.css1 .links p {
 	display: inline-block;
 	margin: 0 10px;
 	color: hsl(195, 87%, 36%);
 	font-family: 'Lato', sans-serif;
 }
 
-.links p a {
+.css1 .links p a {
 	color: hsl(195, 87%, 36%);
 	font-family: 'Lato', sans-serif;
 }
 
-.links p a:hover {
+.css1 .links p a:hover {
 	color: hsl(195, 87%, 21%);
 }
 
-.follow {
+.css1 .follow {
 	position: relative;
 	min-height: 60px;
 	background-color: hsl(195, 87%, 36%);
 }
 
+.css1 .btn {
+	height: 50px;
+}
+
 @media (max-width: 776px) {
-	.header-text h2 {
+	.css1 .header-text h2 {
 		font-size: 66px;
 	}
 
-	.header-text a {
+	.css1 .header-text a {
 		display: block;
 		margin: 0 0 30px;
 	}
 
-	.links p {
+	.css1 .links p {
 		display: block;
 	}
 }
+

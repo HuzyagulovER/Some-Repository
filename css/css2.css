@@ -1,122 +1,33 @@
-* {
-	font-family: 'Montserrat', sans-serif;
+.css2 {
+	min-height: 500px;
 }
 
-body {
-	min-height: 3000px;
+.css2 .btn {
+	padding: 10px 15px;
 }
 
-p {
-	display: block;
+/* .css2 .btn-1 {
+	background-color: hsl(0, 100%, 50%);
 }
 
-.navbar {
-	
+.css2 .btn-2 {
+	background-color: hsl(72, 100%, 50%);
 }
 
-.header {
-	background: hsl(195, 87%, 51%);
-	position: absolute;
-	width: 100%;
+.css2 .btn-3 {
+	background-color: hsl(144, 100%, 50%);
 }
 
-.navbar {
-	min-height: 70px;
+.css2 .btn-4 {
+	background-color: hsl(216, 100%, 50%);
 }
 
-.contain {
-	padding-right: 15px;
-	padding-left: 15px;
-}
- 
-.header-text {
-	position: relative;
-	max-width: 680px;
-	margin: 70px auto 90px;
+.css2 .btn-5 {
+	background-color: hsl(288, 100%, 50%);
 }
 
-.header-text h2 {
-	font-weight: 700;
-	font-size: 98px;
-
+.css2 .btn:hover {
+	background-color: hsl(288, 100%, 50%);
+	transform: scale(1.1);
 }
-
-.header-text h3 {
-	font-family: 'Lato', sans-serif;
-	margin-bottom: 30px;
-	font-weight: 400;
-	line-height: 1.4;
-	letter-spacing: normal;
-}
-
-.white {
-	color: #fff !important;
-}
-
-.dark-blue {
-	color: hsl(195, 87%, 21%);
-}
-
-.orange {
-	color: hsl(44, 84%, 59%);
-}
-
-.bg-dark-blue {
-	background-color: hsl(195, 87%, 21%);
-}
-
-.bg-orange {
-	background-color: hsl(44, 84%, 59%);
-}
-
-.header-text a {
-	margin: 0 7px;
-	height: auto;
-	font-family: 'Montserrat', arial, sans-serif;
-	font-size: 18px;
-	font-weight: 700;
-	padding: 7px 30px;
-	text-transform: uppercase;
-}
-
-.links {
-	text-align: center;
-	margin-bottom: 20px;
-}
-
-.links p {
-	display: inline-block;
-	margin: 0 10px;
-	color: hsl(195, 87%, 36%);
-	font-family: 'Lato', sans-serif;
-}
-
-.links p a {
-	color: hsl(195, 87%, 36%);
-	font-family: 'Lato', sans-serif;
-}
-
-.links p a:hover {
-	color: hsl(195, 87%, 21%);
-}
-
-.follow {
-	position: relative;
-	min-height: 60px;
-	background-color: hsl(195, 87%, 36%);
-}
-
-@media (max-width: 776px) {
-	.header-text h2 {
-		font-size: 66px;
-	}
-
-	.header-text a {
-		display: block;
-		margin: 0 0 30px;
-	}
-
-	.links p {
-		display: block;
-	}
-}
+ */
