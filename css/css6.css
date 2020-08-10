@@ -25,9 +25,10 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	
-	width: 100%;
+
 	justify-content: center;
+
+	width: 100%;
 
 	perspective: 300px;
 }
@@ -37,7 +38,6 @@
 	width: 100px;
 	height: 100px;
 
-	/*overflow: hidden;*/
 	transition: all 0.8s ease 0s;
 
 	transform-style: preserve-3d;
@@ -64,16 +64,15 @@
 
 	transition: all 0.8s ease 0s;
 
-
-}
-
-.css6 .lever {
-	z-index: 2;
-	backface-visibility: hidden;
+	
+	/*backface-visibility: hidden;*/
 }
 
 .css6 .lever2 {
 	transform: rotateX(-180deg);
+
+	background-color: #82D40D;
+
 }
 
 .css6 .contain:hover .lever-container {
