@@ -78,6 +78,8 @@
 	z-index: 1;
 
 	border: 2px solid red;
+
+	opacity: 100%;
 }
 
 .css4 .button:before {
