@@ -99,6 +99,7 @@
 	left: 100%;
 
 	opacity: 0%;
+	-webkit-opacity: 0%;
 }
 
 .css4 .b-text:after,
