@@ -79,7 +79,7 @@
 
 	border: 2px solid red;
 
-	opacity: 100%;
+	opacity: 1;
 }
 
 .css4 .button:before {
@@ -99,7 +99,6 @@
 	left: 100%;
 
 	opacity: 0%;
-	-webkit-opacity: 0%;
 }
 
 .css4 .b-text:after,
