@@ -101,13 +101,10 @@
 
 	border-radius: 50%;
 
-	box-shadow: 0 15px #C70000;
+	box-shadow: 0 15px #AA0101;
 
 	transition: bottom 0.4s ease 0s, box-shadow 0.4s ease 0s;
 }
 
 .css5 .button:active {
-	bottom: -10px;
-
-	box-shadow: 0 4px #C70000;
-}
+	bottom: -10px;}

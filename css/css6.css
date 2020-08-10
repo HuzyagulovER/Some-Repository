@@ -1,0 +1,79 @@
+.css6  *{
+	/* Обнуление */
+	margin: 0;
+	padding: 0;
+}
+
+.css6 {
+	height: 300px;
+
+	background-color: #222;
+}
+
+.css6 .contain {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+
+	height: 100%;
+	perspective: 300px;
+}
+
+.css6 .lever-container {
+	
+	width: 100px;
+	height: 100px;
+
+	/*overflow: hidden;*/
+	transition: all 0.8s ease 0s;
+
+	transform-style: preserve-3d;
+}
+
+.css6 .lever,
+.css6 .lever2 {
+	width: 100px;
+	height: 100px;
+
+	position: absolute;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	 justify-content: center;
+	-ms-align-items: center;
+	align-items: center; 
+
+	background-color: #D4580D;
+
+	transition: all 0.8s ease 0s;
+
+
+}
+
+.css6 .lever {
+	z-index: 2;
+	backface-visibility: hidden;
+}
+
+.css6 .lever2 {
+	transform: rotateX(-180deg);
+}
+
+.css6 .contain:hover .lever-container {
+	transform: rotateX(180deg);
+}
+
+.css6 .lever-container span {
+	text-transform: uppercase;
+	font-weight: bold;
+}
