@@ -65,7 +65,7 @@
 	transition: all 0.8s ease 0s;
 
 	
-	/*backface-visibility: hidden;*/
+	backface-visibility: hidden;
 }
 
 .css6 .lever2 {
