@@ -31,6 +31,9 @@
 	width: 100%;
 
 	perspective: 300px;
+
+	backface-visibility: hidden;
+	
 }
 
 .css6 .lever-container {
@@ -41,6 +44,9 @@
 	transition: all 0.8s ease 0s;
 
 	transform-style: preserve-3d;
+
+	backface-visibility: hidden;
+
 }
 
 .css6 .lever,
