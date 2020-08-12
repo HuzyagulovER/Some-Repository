@@ -1,6 +1,8 @@
 .css4 {
 	min-height: 300px;
 
+	position: relative;
+
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -166,5 +168,11 @@
 	}
 	100% {
 		transform: rotate(360deg);
+	}
+}
+
+@media (max-width: 450px) {
+	.css4 .contain {
+		transform: scale(0.6);
 	}
 }
