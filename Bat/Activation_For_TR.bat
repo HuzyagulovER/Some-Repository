@@ -43,7 +43,7 @@ git commit -m "%message%"
 	goto MAIN
 
 :MAIN
-	cd ../..
+	cd ..
 	start "Activation" sublime_text
  	cd Test_Repository/
  	browser-sync start --server --direction --files "**/*"

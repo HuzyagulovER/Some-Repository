@@ -8,3 +8,4 @@ echo ^<Command list^>: act ^| rest ^|
 	set /p cmd=^<Enter command^>: 
 	if /i %cmd%==act (start Bat\Activation_For_TR.bat & exit)
 	pause
+	exit
