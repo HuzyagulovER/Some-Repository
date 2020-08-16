@@ -1,6 +1,5 @@
 @echo off
 
-dir
 git status
 
 :EnterMSG
@@ -22,8 +21,6 @@ git status
 	set /p message=< Bat/mssg.txt
 	goto Push_Or_Pull
 
-git commit -m "%message%"
-
 :Push_Or_Pull
 	goto EnterCMD
 
@@ -33,6 +30,7 @@ git commit -m "%message%"
 
 :Push
 	git add .
+	git commit -m "%message%"
 	git status
 	git push
 	goto MAIN
