@@ -1,5 +1,5 @@
 @echo off
-echo ^<Command list^>: act ^| commit ^| restore
+echo ^<Command list^>: act ^| push ^| restore
 
 :Loop
 	goto Manage_Menu
@@ -7,5 +7,5 @@ echo ^<Command list^>: act ^| commit ^| restore
 :Manage_Menu
 	set /p cmd=^<Enter command^>: 
 	if /i %cmd%==act (start Bat\Activation_For_TR.bat & goto Loop)
-	if /i %cmd%==commit (start Bat\Commit_For_TR.bat & goto Loop)
+	if /i %cmd%==Push (start Bat\Push_For_TR.bat & goto Loop)
 	pause
