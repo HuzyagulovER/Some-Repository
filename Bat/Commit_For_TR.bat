@@ -2,7 +2,6 @@
 
 cd ..
 git status
-git add .
 git status
 set /p enter_message="Enter the commit message: "
 if not defined enter_message goto NoneMSG
@@ -27,6 +26,7 @@ pause
 	goto MAIN
 
 :MAIN
+	git add .
 	git commit -m "%message%"
  	git status
 	git push
