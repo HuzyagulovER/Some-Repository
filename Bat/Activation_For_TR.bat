@@ -36,6 +36,7 @@ git status
 	goto MAIN
 
 :Pull
+	git commit -m "%message%"
 	git status
 	git pull
 	git restore .
