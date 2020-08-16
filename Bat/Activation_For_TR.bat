@@ -38,6 +38,7 @@ git status
 :Pull
 	git status
 	git pull
+	git restore .
 	goto MAIN
 
 :MAIN
