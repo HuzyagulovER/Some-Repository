@@ -1,6 +1,5 @@
 @echo off
 
-cd ..
 git status
 set /p enter_message="Enter the commit message: "
 if not defined enter_message goto NoneMSG
