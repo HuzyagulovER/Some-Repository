@@ -1,6 +1,6 @@
 @echo off
 
-cd Test_Repository/
+dir
 git status
 
 :EnterMSG
@@ -9,17 +9,17 @@ git status
 	if /i %enter_message%==^date (goto DateMSG) else goto NewMSG
 
 :DateMSG
-	echo Uploaded %date% %time% > C:\Users\User\Desktop\EduarD\Test_Repository\mssg.txt
-	set /p message=< C:\Users\User\Desktop\EduarD\Test_Repository\mssg.txt
+	echo Uploaded %date% %time% > Bat/mssg.txt
+	set /p message=< Bat/mssg.txt
 	goto Push_Or_Pull
 	
 :NewMSG
-	echo %enter_message% %date% %time% > C:\Users\User\Desktop\EduarD\Test_Repository\mssg.txt
-	set /p message=< C:\Users\User\Desktop\EduarD\Test_Repository\mssg.txt
+	echo %enter_message% %date% %time% > Bat/mssg.txt
+	set /p message=< Bat/mssg.txt
 	goto Push_Or_Pull
 
 :NoneMSG
-	set /p message=< C:\Users\User\Desktop\EduarD\Test_Repository\mssg.txt
+	set /p message=< Bat/mssg.txt
 	goto Push_Or_Pull
 
 git commit -m "%message%"
