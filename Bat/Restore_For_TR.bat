@@ -2,6 +2,7 @@
 
 title Restore
 set /p message=< Bat\mssg.txt
+set message=%message:~9%
 
 goto MAIN
 
@@ -13,7 +14,7 @@ goto MAIN
 	git restore .
  	git status
 	echo.
-	call :Colors "Black" "DarkYellow" "The last commit message:   %message%"
+	call :Colors "Black" "DarkYellow" "The last commit date:   %message%"
 	echo.
 	call :Colors "Yellow" "DarkGreen" "The files have been restored successfully!"
 	timeout /t 3
