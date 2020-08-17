@@ -34,6 +34,5 @@ pause
 	git push
 	echo.
 	call :Colors "'  The files have been pushed successfully!  '"
-	timeout /t 5
-	if not defined access (exit)
-	exit /b
+	if not defined access (timeout /t 5) else (exit /b)
+	exit
