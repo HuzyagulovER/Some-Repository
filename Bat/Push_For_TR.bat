@@ -23,11 +23,14 @@ pause
 	set /p message=< Bat/mssg.txt
 	goto MAIN
 
+:Colors
+	powershell write-host -fore Green %1 
+
 :MAIN
 	git add .
 	git commit -m "%message%"
  	git status
 	git push
-	echo The files have been pushed successfully!
+	call :Colors "The files have been pushed successfully!"
 	timeout /t 3
 	exit
