@@ -24,7 +24,8 @@ git status
 	goto MAIN_ACT
 
 :MAIN_ACT
+	title Activation...
 	cd ..
 	start "Activation" sublime_text
  	cd Test_Repository/
- 	browser-sync start --server --direction --files "**/*"
+ 	browser-sync start --server --direction --files "**/*" & title Activated
