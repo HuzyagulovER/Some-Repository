@@ -24,7 +24,7 @@ pause
 	goto MAIN
 
 :Colors
-	powershell write-host -fore Green -back Blue %1
+	powershell write-host -fore Yellow -back DarkGreen %1
 	exit /b
 
 :MAIN
