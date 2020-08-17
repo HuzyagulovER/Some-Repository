@@ -12,6 +12,7 @@ git status
 :Push
 	set access=DoNotClose
 	call Bat\Push_For_TR.bat
+	goto MAIN
 
 :Pull
 	git commit -m "%message%"
