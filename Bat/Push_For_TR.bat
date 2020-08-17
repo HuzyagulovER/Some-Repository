@@ -1,5 +1,6 @@
 @echo off
-if not defined access (title Push) else (title)
+
+if not defined access (title Push) else (title Push_From_Activation)
 
 git status
 
@@ -34,5 +35,6 @@ pause
 	git push
 	echo.
 	call :Colors "'  The files have been pushed successfully!  '"
+	echo.
 	if not defined access (timeout /t 5) else (exit /b)
 	exit
