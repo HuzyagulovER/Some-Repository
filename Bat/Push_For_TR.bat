@@ -28,4 +28,6 @@ pause
 	git commit -m "%message%"
  	git status
 	git push
+	echo The files have been pushed successfully!
+	timeout /t 3s
 	exit
