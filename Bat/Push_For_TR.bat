@@ -8,12 +8,12 @@ if %enter_message%==^date (goto DateMSG) else goto NewMSG
 pause
 
 :DateMSG
-	echo Uploaded %date% %time% > Bat/mssg.txt
+	echo Uploaded %date% %time%> Bat/mssg.txt
 	set /p message=< Bat/mssg.txt
 	goto MAIN
 	
 :NewMSG
-	echo %enter_message% %date% %time% > Bat/mssg.txt
+	echo %enter_message% %date% %time%> Bat/mssg.txt
 	set /p message=< Bat/mssg.txt
 	goto MAIN
 
