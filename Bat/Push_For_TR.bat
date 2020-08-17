@@ -1,6 +1,9 @@
-@echo off
+@echo on
+
+set R=%access%
 
 git status
+
 set /p enter_message="Enter the commit message: "
 if not defined enter_message goto NoneMSG
 if %enter_message%==^date (goto DateMSG) else goto NewMSG
@@ -33,4 +36,4 @@ pause
 	echo.
 	call :Colors "'  The files have been pushed successfully!  '"
 	timeout /t 5
-	exit
+	exit /b
