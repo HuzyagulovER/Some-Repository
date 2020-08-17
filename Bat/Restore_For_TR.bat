@@ -17,5 +17,5 @@ goto MAIN
 	call :Colors "Black" "DarkYellow" "The last commit date:   %message%"
 	echo.
 	call :Colors "Yellow" "DarkGreen" "The files have been restored successfully!"
-	timeout /t 3
+	timeout /t 6
 	exit
