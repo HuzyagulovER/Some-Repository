@@ -1,4 +1,4 @@
-@echo on
+@echo off
 if not defined access (title Push) else (title)
 
 git status
