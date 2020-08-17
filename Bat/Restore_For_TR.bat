@@ -1,17 +1,21 @@
 @echo off
 
 git status
+goto MAIN
+
+:Message
+	set /p message=< mssg.txt
 
 :Colors
-	powershell write-host -fore Yellow -back DarkGreen %1
+	powershell write-host -fore %1 -back %2 %3
 	exit /b
 
 :MAIN
-	git re
-	git commit -m "%message%"
+	git restore .
  	git status
-	git push
 	echo.
-	call :Colors "The files have been pushed successfully!"
+	call :Colors "White" "Orange" "The last commit date:   %message%"
+	call :Colors "Yellow" "DarkGreen" "The files have been restored successfully!"
 	timeout /t 3
 	exit
+
