@@ -39,7 +39,9 @@ git status
 	git commit -m "%message%"
 	git status
 	git pull
+	git status
 	git restore .
+	git status
 	goto MAIN
 
 :MAIN
