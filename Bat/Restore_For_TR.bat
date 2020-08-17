@@ -1,21 +1,22 @@
 @echo off
 
-git status
-goto MAIN
+title Restore
+set /p message=< Bat\mssg.txt
 
-:Message
-	set /p message=< mssg.txt
+goto MAIN
 
 :Colors
 	powershell write-host -fore %1 -back %2 %3
 	exit /b
 
 :MAIN
-	git restore .
+::	git restore .
  	git status
 	echo.
-	call :Colors "White" "Orange" "The last commit date:   %message%"
+	call :Colors "Black" "DarkYellow" "The last commit message:   %message%"
+	echo.
 	call :Colors "Yellow" "DarkGreen" "The files have been restored successfully!"
-	timeout /t 3
+::	timeout /t 3
+	pause
 	exit
 

@@ -19,7 +19,7 @@ echo.
 	if /i %cmd%==restore (start Bat\Restore_For_TR.bat & goto Manage_Menu)
 	if /i %cmd%==exit (exit)
 	if /i %cmd%==reload (start Manager.bat & exit)
-	call :Colors "Red" "%cmd% is undefined command!"
+	call :Colors "Red" "'///***   %cmd% is undefined command!   ***///'"
 	goto Manage_Menu
 	pause
 
