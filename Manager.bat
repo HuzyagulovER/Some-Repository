@@ -4,7 +4,7 @@ title Command Manager
 call :Colors "Cyan" "black" "Welcome to Command Manager!"
 echo.
 
-echo ^<Command list^>: act ^| push ^| restore ^| reload ^| exit
+echo ^<Command list^>: act ^| push ^| pull ^| restore ^| reload ^| exit
 
 :Loop
 	goto Manage_Menu
