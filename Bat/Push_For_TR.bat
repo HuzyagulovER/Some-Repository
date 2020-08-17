@@ -34,5 +34,6 @@ pause
 	git push
 	echo.
 	call :Colors "The files have been pushed successfully!"
+	^G
 	timeout /t 3
 	exit
