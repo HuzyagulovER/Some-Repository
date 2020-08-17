@@ -5,12 +5,12 @@ call :Colors "Cyan" "black" "Welcome to Command Manager!"
 echo.
 
 echo ^<Command list^>: act ^| push ^| restore ^| reload ^| exit
-echo.
 
 :Loop
 	goto Manage_Menu
 
 :Manage_Menu
+	echo.
 	set cmd=
 	set /p cmd=^<Enter command^>
 	if not defined cmd goto Manage_Menu
@@ -19,7 +19,7 @@ echo.
 	if /i %cmd%==restore (goto Restore)
 	if /i %cmd%==exit (exit)
 	if /i %cmd%==reload (start Manager.bat & exit)
-	call :Colors "red" "black" "'///***   %cmd% is undefined command!   ***///'"
+	call :Colors "darkred" "black" "'///***   %cmd% is undefined command!   ***///'"
 	goto Manage_Menu
 
 :Colors
@@ -27,14 +27,18 @@ echo.
 	exit /b
 
 :Agreement
-	set agreement=You trying to %reply%
-	pause
-	call :Colors "black" "darkyellow" "%agreement%"
-::	if /i %agree%==Y (exit/b) else (if /i %agree%==N (goto Manage_Menu) else (echo "qq" & pause))
+	set agreement="'   You trying to %reply%   '"
+	echo.
+	call :Colors "black" "darkyellow" %agreement%
+	set /p agree=^<Yes or Not (Y/N)^>
+	echo.
+	if not defined agree (call :Colors "darkred" "black" "'///***   The command is undefined!   ***///'" & goto Manage_Menu)
+	if /i %agree%==N (goto Manage_Menu)
+	if /i %agree%==Y (goto Manage_Menu)
+	echo.
+	goto Manage_Menu
 
 :Restore
-	set reply=%cmd%. All of changes will be deleted.
-	::. All of the changes you made will be deleted.
+	set reply=%cmd%. All of the changes you made will be deleted.
 	call :Agreement
-	pause
 	goto Manage_Menu
