@@ -18,6 +18,4 @@ goto MAIN
 	echo.
 	call :Colors "Yellow" "DarkGreen" "The files have been restored successfully!"
 	timeout /t 3
-	pause
-	exit
 
