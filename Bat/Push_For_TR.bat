@@ -1,7 +1,5 @@
 @echo on
 
-set R=%access%
-
 git status
 
 set /p enter_message="Enter the commit message: "
@@ -13,27 +11,27 @@ pause
 :DateMSG
 	echo Uploaded %date% %time%> Bat/mssg.txt
 	set /p message=< Bat/mssg.txt
-	goto MAIN
+	goto MAIN_PUSH
 	
 :NewMSG
 	echo %enter_message% %date% %time%> Bat/mssg.txt
 	set /p message=< Bat/mssg.txt
-	goto MAIN
+	goto MAIN_PUSH
 
 :NoneMSG
 	set /p message=< Bat/mssg.txt
-	goto MAIN
+	goto MAIN_PUSH
 
 :Colors
 	powershell write-host -fore Black -back DarkGreen %1
 	exit /b
 
-:MAIN
+:MAIN_PUSH
 	git add .
 	git commit -m "%message%"
  	git status
 	git push
 	echo.
 	call :Colors "'  The files have been pushed successfully!  '"
-	timeout /t 5
+	if not defined access (exit) else (timeout /t 5)
 	exit /b

@@ -12,7 +12,7 @@ git status
 :Push
 	set access=DoNotClose
 	call Bat\Push_For_TR.bat
-	goto MAIN
+	goto MAIN_ACT
 
 :Pull
 	git commit -m "%message%"
@@ -21,9 +21,9 @@ git status
 	git status
 	git restore .
 	git status
-	goto MAIN
+	goto MAIN_ACT
 
-:MAIN
+:MAIN_ACT
 	cd ..
 	start "Activation" sublime_text
  	cd Test_Repository/
