@@ -24,7 +24,7 @@ pause
 	goto MAIN
 
 :Colors
-	powershell write-host -fore Green %1
+	powershell write-host -fore Green %2
 	exit /b
 
 :MAIN
@@ -32,7 +32,7 @@ pause
 	git commit -m "%message%"
  	git status
 	git push
-	
+
 	call :Colors "The files have been pushed successfully!"
 	timeout /t 3
 	exit
