@@ -32,6 +32,7 @@ pause
 	git commit -m "%message%"
  	git status
 	git push
+	
 	call :Colors "The files have been pushed successfully!"
 	timeout /t 3
 	exit
