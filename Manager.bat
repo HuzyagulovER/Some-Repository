@@ -42,5 +42,5 @@ echo ^<Command list^>: act ^| push ^| restore ^| reload ^| exit
 :Restore
 	set reply=%cmd%. All of the changes you made will be deleted.
 	call :Agreement
-	start Bat\Reload_For_TR.bat
+	start Bat\Restore_For_TR.bat
 	goto Manage_Menu
