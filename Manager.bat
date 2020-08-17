@@ -13,7 +13,7 @@ echo ^<Command list^>: act ^| push ^| restore ^| reload ^| exit
 	echo.
 	set cmd=
 	set agree=
-	set /p cmd=^<Enter command^>
+	set /p cmd=^<Enter command^>: 
 	if not defined cmd goto Manage_Menu
 	if /i %cmd%==act (start Bat\Activation_For_TR.bat & goto Manage_Menu)
 	if /i %cmd%==push (start Bat\Push_For_TR.bat & goto Manage_Menu)
