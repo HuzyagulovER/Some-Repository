@@ -12,6 +12,7 @@ echo ^<Command list^>: act ^| push ^| restore ^| reload ^| exit
 :Manage_Menu
 	echo.
 	set cmd=
+	set agree=
 	set /p cmd=^<Enter command^>
 	if not defined cmd goto Manage_Menu
 	if /i %cmd%==act (start Bat\Activation_For_TR.bat & goto Manage_Menu)
@@ -34,11 +35,12 @@ echo ^<Command list^>: act ^| push ^| restore ^| reload ^| exit
 	echo.
 	if not defined agree (call :Colors "darkred" "black" "'///***   The command is undefined!   ***///'" & goto Manage_Menu)
 	if /i %agree%==N (goto Manage_Menu)
-	if /i %agree%==Y (goto Manage_Menu)
+	if /i %agree%==Y (exit /b)
 	echo.
 	goto Manage_Menu
 
 :Restore
 	set reply=%cmd%. All of the changes you made will be deleted.
 	call :Agreement
+	start Bat\Reload_For_TR.bat
 	goto Manage_Menu
