@@ -29,5 +29,5 @@ pause
  	git status
 	git push
 	echo The files have been pushed successfully!
-	timeout /t 3s
+	timeout /t 3
 	exit
