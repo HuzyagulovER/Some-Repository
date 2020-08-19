@@ -2,17 +2,9 @@
 
 let btn = document.getElementById("css8_btn");
 let p = document.getElementById("css8_p");
-
-let i = 0;
-p.innerHTML = "Lol"
+let i=0;
 
 btn.onclick = function() {
-	if (i==0) {
-		p.style.display = "block";
-		i=1;
-	} else {
-		p.style.display = "none";
-		i=0;
-	};
-
+	this.innerHTML = i;
+	i+=1;
 };
