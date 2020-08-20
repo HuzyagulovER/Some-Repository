@@ -53,7 +53,7 @@ echo ^<Command list^>: act ^| push ^| pull ^| restore ^| reload ^| exit
 :User_Check
 	chcp 65001 >nul
 	cmdkey /list:git:https://github.com > C:\Users\User\User_toggler.txt
-	chcp 866
+	chcp 866 >nul
 	findstr "User" C:\Users\User\User_toggler.txt > temp.txt
 	set /p UserCheck=<temp.txt
 	del temp.txt & del C:\Users\User\User_toggler.txt
