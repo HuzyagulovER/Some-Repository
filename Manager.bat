@@ -1,4 +1,4 @@
-@echo on
+@echo off
 title Command Manager HuzyagulovER
 
 echo.
@@ -51,7 +51,7 @@ echo ^<Command list^>: act ^| push ^| pull ^| restore ^| reload ^| exit
 	goto Manage_Menu
 
 :User_Check
-	chcp 65001
+	chcp 65001 >nul
 	cmdkey /list:git:https://github.com > C:\Users\User\User_toggler.txt
 	chcp 866
 	findstr "User" C:\Users\User\User_toggler.txt > temp.txt
@@ -63,7 +63,7 @@ echo ^<Command list^>: act ^| push ^| pull ^| restore ^| reload ^| exit
 
 	findstr "Ed" C:\Users\User\Users_data.txt > temp.txt
 	set /p Ed_pass=< temp.txt
-::	del temp.txt
+	del temp.txt
 	set Ed_pass=%Ed_pass:~14%
 
 	if %UserCheck% neq HuzyagulovER (cmdkey /delete:git:https://github.com >nul & cmdkey /generic:git:https://github.com /user:HuzyagulovER /pass:%Ed_pass% >nul)
