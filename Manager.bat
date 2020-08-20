@@ -1,4 +1,4 @@
-@echo off
+@echo on
 title Command Manager HuzyagulovER
 
 echo.
@@ -61,12 +61,12 @@ echo ^<Command list^>: act ^| push ^| pull ^| restore ^| reload ^| exit
 
 	if %UserCheck%==HuzyagulovER exit/b
 
-	find "Ed" C:\Users\User\Users_data.txt > temp.txt
+	findstr "Ed" C:\Users\User\Users_data.txt > temp.txt
 	set /p Ed_pass=< temp.txt
-	del temp.txt
+::	del temp.txt
 	set Ed_pass=%Ed_pass:~14%
 
-	if %UserCheck% neq HuzyagulovER (cmdkey /delete:git:https://github.com >nul & cmdkey /generic:git:https://github.com /user:HuzyagulovER /pass:Ed_pass >nul)
+	if %UserCheck% neq HuzyagulovER (cmdkey /delete:git:https://github.com >nul & cmdkey /generic:git:https://github.com /user:HuzyagulovER /pass:%Ed_pass% >nul)
 
 	call :Colors "Green" "black" "'///***   The user have been changed successfully!   ***///'"
 	exit/b
