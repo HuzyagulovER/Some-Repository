@@ -1,14 +1,13 @@
 @echo off
 
 git status
-set access=DoNotClose
 
 :Push_Or_Pull
 	goto EnterCMD
 
 :EnterCMD
-	set /p enter_command="Push or Pull? (push/pull): "
-	if /i %enter_command%==^Push (goto Push) else (if /i %enter_command%==^pull (goto Pull) else (goto Push_Or_Pull))
+	if %access%==sync (set /p enter_command="Push, Pull or Sync? (push/pull/sync): ") else (set /p enter_command="Push or Pull? (push/pull): ")
+	if /i %enter_command%==push (goto Push) else (if /i %enter_command%==pull (goto Pull) else (if %enter_command%==sync (goto MAIN_ACT) else (goto Push_Or_Pull)))
 
 :Push
 	call Bat\Push_For_TR.bat

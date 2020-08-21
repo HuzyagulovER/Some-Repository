@@ -8,7 +8,7 @@ echo.
 call :Colors "Cyan" "black" "'						Welcome to Command Manager!						'"
 echo.
 
-echo ^<Command list^>: act ^| push ^| pull ^| restore ^| reload ^| exit
+echo ^<Command list^>: act ^| push ^| pull ^| sync ^| restore ^| reload ^| exit
 
 :Loop
 	goto Manage_Menu
@@ -17,11 +17,13 @@ echo ^<Command list^>: act ^| push ^| pull ^| restore ^| reload ^| exit
 	echo.
 	set cmd=
 	set agree=
+	set access=
 	set /p cmd=^<Enter command^>: 
 	if not defined cmd goto Manage_Menu
 	if /i %cmd%==act (start Bat\Activation_For_TR.bat & goto Manage_Menu)
 	if /i %cmd%==push (start Bat\Push_For_TR.bat & goto Manage_Menu)
 	if /i %cmd%==pull (start Bat\Pull_For_TR.bat & goto Manage_Menu)
+	if /i %cmd%==sync (set access=sync & start Bat\Activation_For_TR.bat & goto Manage_Menu)
 	if /i %cmd%==restore (goto Restore)
 	if /i %cmd%==exit (exit)
 	if /i %cmd%==reload (start Manager.bat & exit)
