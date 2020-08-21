@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#css9 {
+	min-height: 100px;
+
+	display: flex; 
+}
+
+#css9 .container {
+	width: 100%;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.menu_burger__line span,
+.menu_burger__line:before,
+.menu_burger__line:after {
+	display: block;
+	position: relative;
+	background-color: #000;
+	height: 3px;
+	width: 25px;
+	
+	transition: all 0.2s ease 0s;
+}
+
+.menu_burger__line:before {
+	top:-5px;
+	content: '';
+}
+
+.menu_burger__line:after {
+	bottom: -5px;
+	content: '';
+}
+
+.menu_burger__line.active span {
+	transform: scale(0);
+}
+
+.menu_burger__line.active:before {
+	top:2.5px;
+	transform: translate3d(0,0,0) rotate(-45deg);
+}
+
+.menu_burger__line.active:after {
+	top:-2.5px;
+	transform: translate3d(0,0,0) rotate(45deg);
+}
