@@ -1,4 +1,4 @@
-@echo off
+@echo oFF
 title Command Manager HuzyagulovER
 
 echo.
@@ -60,16 +60,16 @@ echo ^<Command list^>: act ^| push ^| pull ^| sync ^| restore ^| reload ^| exit
 
 :User_Check
 	chcp 65001 >nul
-	cmdkey /list:git:https://github.com > C:\Users\User\User_toggler.txt
+	cmdkey /list:git:https://github.com > %USERPROFILE%\User_toggler.txt
 	chcp 866 >nul
-	findstr "User" C:\Users\User\User_toggler.txt > temp.txt
+	findstr "User" %USERPROFILE%\User_toggler.txt > temp.txt
 	set /p UserCheck=<temp.txt
-	del temp.txt & del C:\Users\User\User_toggler.txt
+	del temp.txt & del %USERPROFILE%\User_toggler.txt
 	set UserCheck=%UserCheck:~10%
 
 	if %UserCheck%==HuzyagulovER exit/b
 
-	findstr "Ed" C:\Users\User\Users_data.txt > temp.txt
+	findstr "Ed" %USERPROFILE%\Users_data.txt > temp.txt
 	set /p Ed_pass=< temp.txt
 	del temp.txt
 	set Ed_pass=%Ed_pass:~14%
