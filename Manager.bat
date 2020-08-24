@@ -1,4 +1,4 @@
-@echo oFF
+@echo off
 title Command Manager HuzyagulovER
 
 goto WITH_AUTHORIZATION
