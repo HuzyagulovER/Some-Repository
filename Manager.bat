@@ -1,7 +1,15 @@
 @echo oFF
 title Command Manager HuzyagulovER
 
-echo.
+goto WITH_AUTHORIZATION
+
+:AUTHORIZATION_ERROR
+	pause >nul
+	cls
+
+:WITH_AUTHORIZATION
+	echo.
+
 call :User_Check
 echo.
 
@@ -68,6 +76,9 @@ echo ^<Command list^>: act ^| push ^| pull ^| sync ^| restore ^| reload ^| exit
 	set UserCheck=%UserCheck:~10%
 
 	if %UserCheck%==HuzyagulovER exit/b
+
+	:: Проверка на существование файла Users_data.txt
+	if not exist %USERPROFILE%\Users_data.txt (call :Colors "Black" "DarkRed" "'      The file '%USERPROFILE%\Users_data.txt' is not exist! Create it and try again!      '" & echo. & call :Colors "darkyellow" "black" "'      Press any key to try again...      '" & goto AUTHORIZATION_ERROR)
 
 	findstr "Ed" %USERPROFILE%\Users_data.txt > temp.txt
 	set /p Ed_pass=< temp.txt
