@@ -1,0 +1,38 @@
+.css10 {
+	display: flex;
+	justify-content: center;
+
+	transition: all 0.8s ease 0s;
+}
+
+.css10 a {
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #000;
+}
+
+.css10 a:active {
+	background-color: #000;
+	color: #fff;
+}
+
+.css10 .bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+
+	visibility: hidden;
+
+}
+
+.css10 .bg.active {
+	visibility: visible;
+}

@@ -34,10 +34,16 @@ if defined access (del access.txt & goto SYNC_ACT) else (goto Push_Or_Pull)
 	call :Colors "Green" "Black" "'						Welcome to Synchronization!						'"
 
 	cd ..
-	start "Activation" sublime_text
- 	cd Test_Repository/
+	start "Activation" "C:\Program Files\Sublime Text 3\sublime_text.exe"
+	echo.
+	if errorlevel 1 (call :Colors "DarkRed" "Black" "'Ooops... Something goes wrong.'" & goto Exit)
+ 	cd Some-Repository/
  	title Synchronization Activated
  	browser-sync start --server --direction --files "**/*"
+
+:Exit
+	timeout /t 5
+	exit
 
 :Colors
 	powershell write-host -fore %1 -back %2 %3

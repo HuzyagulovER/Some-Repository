@@ -45,9 +45,17 @@
 	visibility: hidden;
 }
 
-.popup:target {
+.popup.active {
 	opacity: 1;
 	visibility: visible;
+
+}
+
+.popup.active .popup__body{
+
+	/*transform: translate(0, 0);*/
+	transform: scale(1);
+
 }
 
 .popup__body {
@@ -63,6 +71,10 @@
 	justify-content: center;
 
 	padding: 30px 10px;
+
+
+	/*transform: translate(0, -100%);*/
+	transform: scale(2);
 }
 
 .popup__content {
@@ -94,7 +106,11 @@
 	font-size: 40px;
 	margin: 0 0 1em 0;
 }
-.popup__text {}
+
+.popup__call,
+.popup__close {
+	cursor: pointer;
+}
 
 @media (max-width: 450px) {
 	.css7 .popup__call a {
