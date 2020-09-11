@@ -43,17 +43,16 @@
 
 	opacity: 0;
 	visibility: hidden;
+	/*display: none;*/
 }
 
 .popup.active {
 	opacity: 1;
-	visibility: visible;
+	/*visibility: visible;*/
 
 }
 
 .popup.active .popup__body{
-
-	/*transform: translate(0, 0);*/
 	transform: scale(1);
 
 }
@@ -72,8 +71,6 @@
 
 	padding: 30px 10px;
 
-
-	/*transform: translate(0, -100%);*/
 	transform: scale(2);
 }
 

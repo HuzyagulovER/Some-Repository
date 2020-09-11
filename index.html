@@ -26,6 +26,8 @@
 		<!-- File css8.css is not exist. -->
 		<link rel="stylesheet" href="css/css9.css">
 		<link rel="stylesheet" href="css/css10.css">
+		<link rel="stylesheet" href="css/css11.css">
+
 
 
 
@@ -38,6 +40,14 @@
 			* {
 				font-family: sans-serif;
 			}
+
+			.red {
+				background-color: red;
+			}
+
+			a {
+				cursor: pointer;
+			}
 		</style>
 
 		<!-- Fonts -->
@@ -48,7 +58,8 @@
 
 	</head>
 
-	<body>
+	<body onkeyup="hotkey(event)">
+		
 		<div class="css3" id="css3">
 			<div class="contain">
 				<a class="wave-btn" href="#css3">
@@ -104,14 +115,14 @@
 		<hr>
 		
 		<div class="css7" id="css7">
-			<div class="popup__call">
-				<a>Modal window #1</a>
+			<div class="popup__call" id="popup__call">
+				<a onclick="visibilityToggler(event)">Modal window #1</a>
 			</div>
 
 			<div class="popup" id="popup">
 				<div class="popup__body">
 					<div class="popup__content">
-						<a class="popup__close">x</a>
+						<a class="popup__close" onclick="visibilityToggler(event)">x</a>
 						<div class="popup__title">
 							Modal window #1
 						</div>
@@ -128,7 +139,7 @@
 
 		<div class="css9" id="css9" description="burger">
 			<div class="container">
-				<div class="menu_burger">
+				<div class="menu_burger" name="qq">
 					<div class="menu_burger__line">
 						<span></span>
 					</div>
@@ -139,13 +150,25 @@
 		<hr>
 
 		<div class="css10" id="css10">
-			<a href="#css7">Hello</a>
+			<a onclick="setTime()">Hello</a>
 			<div class="bg"></div>
 		</div>
 
 		<hr>
+
+		<div style="height: 100px; background-color: #000; color: #fff">
+			<div id="key"></div>
+		</div>
+
+		<hr>
+
+		<div class="css11" id="css11">
+			<a>QQ</a>
+		</div>
+
+		<hr>
 		<!-- Optional JavaScript -->
-	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
