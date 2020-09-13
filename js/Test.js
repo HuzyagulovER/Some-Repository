@@ -109,10 +109,10 @@ function callVisibilityToggler(callVariable) {
 	let checkPopupCall = checkTarget.closest('.popup__call');
 	let checkPopup = checkTarget.closest('.popup');
 	let id;
+	
 	if (checkPopupCall == null) {
-		if (!isDefined(callVariable)) {
+		if (!callVariable) {
 			id = event.target.closest('.popup');
-			
 		} else {
 			id = callVariable.closest('.popup');
 		};
