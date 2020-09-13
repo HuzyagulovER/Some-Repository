@@ -132,3 +132,10 @@ function scrollInto(IdValue) {
 	let element = document.getElementById(IdValue);
 	element.scrollIntoView({block: 'center', behavior: 'smooth'});
 };
+
+let element = document.getElementsByClassName('resizeH1')[0];
+// document.getElementsByClassName('fontSize')[0].innerHTML = window.getComputedStyle(element).fontSize;
+
+window.addEventListener('resize', function () {
+	document.getElementsByClassName('fontSize')[0].innerHTML = window.getComputedStyle(element).fontSize;
+})

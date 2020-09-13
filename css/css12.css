@@ -1,0 +1,17 @@
+#css12 div {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;	
+
+	margin-bottom: 20px;
+}
+
+#css12 h1 {
+	font-size: calc(24px + 16 * ((100vw - 320px) / (1200 - 320)));
+	text-align: center;
+}
+
+#css12 .test {
+	font-size: 40px;
+}
