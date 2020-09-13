@@ -1,4 +1,11 @@
 "use strict";
+function isDefined(variable) {
+	if (variable == undefined) {
+		return false;
+	} else {
+		return true;
+	};
+};
 
 /*function popup() {
 		$('.popup').toggleClass('active');
@@ -84,15 +91,32 @@ function setTime() {
 };
 
 function hotkey(pressedKey) {
+	var pressedButton = pressedKey.keyCode;
 	document.querySelector('#key').innerHTML = pressedKey.keyCode + ' : button " ' + pressedKey.key + ' "';
+	function escapeButton() {
+		if (pressedButton == 27) {
+			let activeCollection = document.getElementsByClassName('active');
+			for (let i = 0; i < activeCollection.length; i++) {
+				callVisibilityToggler(activeCollection[i]);
+			};
+		};
+	};
+	escapeButton();
 };
 
-function visibilityToggler(callVariable) {
+function callVisibilityToggler(callVariable) {
+	let checkTarget = event.target;
+	let checkPopupCall = checkTarget.closest('.popup__call');
+	let checkPopup = checkTarget.closest('.popup');
 	let id;
-	let checkPopupCall = callVariable.target.closest('.popup__call');
-
 	if (checkPopupCall == null) {
-		id = callVariable.target.closest('.popup');
+		if (!isDefined(callVariable)) {
+			id = event.target.closest('.popup');
+			
+		} else {
+			id = callVariable.closest('.popup');
+		};
+
 		id.classList.toggle('active');
 		setTimeout(function () {id.style.display = 'none'}, 800);
 		id.style.visibility = "hidden";
@@ -102,10 +126,9 @@ function visibilityToggler(callVariable) {
 		id.style.visibility = "visible";
 		id.classList.toggle('active');
 	};
+};
 
-	/*if (id.style.visibility == "visible") {
-		
-	} else {
-		
-	};*/
+function scrollInto(IdValue) {
+	let element = document.getElementById(IdValue);
+	element.scrollIntoView({block: 'center', behavior: 'smooth'});
 };

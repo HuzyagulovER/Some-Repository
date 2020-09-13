@@ -116,13 +116,13 @@
 		
 		<div class="css7" id="css7">
 			<div class="popup__call" id="popup__call">
-				<a onclick="visibilityToggler(event)">Modal window #1</a>
+				<a onclick="callVisibilityToggler()">Modal window #1</a>
 			</div>
 
 			<div class="popup" id="popup">
 				<div class="popup__body">
 					<div class="popup__content">
-						<a class="popup__close" onclick="visibilityToggler(event)">x</a>
+						<a class="popup__close" onclick="callVisibilityToggler()">x</a>
 						<div class="popup__title">
 							Modal window #1
 						</div>
@@ -156,14 +156,14 @@
 
 		<hr>
 
-		<div style="height: 100px; background-color: #000; color: #fff">
+		<div id="keyboardCode" style="height: 100px; background: #000; color: #fff">
 			<div id="key"></div>
 		</div>
 
 		<hr>
 
 		<div class="css11" id="css11">
-			<a>QQ</a>
+			<a onclick="scrollInto('css5')">QQ</a>
 		</div>
 
 		<hr>
