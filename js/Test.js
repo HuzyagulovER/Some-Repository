@@ -138,12 +138,12 @@ window.addEventListener('resize', function () {
 	fallMenu.toggle('active');	
 });*/
 
-document.getElementsByClassName('open_fall_menu')[0].addEventListener('click', function fallingMenu() {
+/*document.getElementsByClassName('open_fall_menu')[0].addEventListener('click', function fallingMenu() {
 	let fallMenu = this.parentElement.lastElementChild.classList;
 	fallMenu.toggle('active');	
-});
+});*/
 
-/*document.getElementsByClassName('open_fall_menu')[0].onclick = function () {
+document.getElementsByClassName('open_fall_menu')[0].onclick = function () {
 	let fallMenu = this.nextElementSibling.classList;
 	fallMenu.toggle('active');
 
@@ -154,4 +154,4 @@ document.getElementsByClassName('open_fall_menu')[0].addEventListener('click', f
 		document.getElementById('css13').style.background = 'white';
 		h = 0;
 	}
-}*/
+}
