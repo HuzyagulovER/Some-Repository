@@ -133,9 +133,13 @@ window.addEventListener('resize', function () {
 	document.getElementsByClassName('fontSize')[0].innerHTML = window.getComputedStyle(element).fontSize;
 });
 
-let h = 0;
-document.getElementById('css13').addEventListener('click', function fallingMenu() {
+/*document.getElementById('css13').addEventListener('click', function fallingMenu() {
 	let fallMenu = this.lastElementChild.classList;
+	fallMenu.toggle('active');	
+});*/
+
+document.getElementsByClassName('open_fall_menu')[0].addEventListener('click', function fallingMenu() {
+	let fallMenu = this.parentElement.lastElementChild.classList;
 	fallMenu.toggle('active');	
 });
 
