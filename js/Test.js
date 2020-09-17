@@ -142,7 +142,7 @@ window.addEventListener('resize', function () {
 	let fallMenu = this.parentElement.lastElementChild.classList;
 	fallMenu.toggle('active');	
 });*/
-
+let h=0;
 document.getElementsByClassName('open_fall_menu')[0].onclick = function () {
 	let fallMenu = this.nextElementSibling.classList;
 	fallMenu.toggle('active');
