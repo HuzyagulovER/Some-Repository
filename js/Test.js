@@ -1,11 +1,4 @@
 "use strict";
-function isDefined(variable) {
-	if (variable == undefined) {
-		return false;
-	} else {
-		return true;
-	};
-};
 
 /*function popup() {
 		$('.popup').toggleClass('active');
@@ -138,4 +131,23 @@ let element = document.getElementsByClassName('resizeH1')[0];
 
 window.addEventListener('resize', function () {
 	document.getElementsByClassName('fontSize')[0].innerHTML = window.getComputedStyle(element).fontSize;
-})
+});
+
+let h = 0;
+document.getElementById('css13').addEventListener('click', function fallingMenu() {
+	let fallMenu = this.lastElementChild.classList;
+	fallMenu.toggle('active');	
+});
+
+/*document.getElementsByClassName('open_fall_menu')[0].onclick = function () {
+	let fallMenu = this.nextElementSibling.classList;
+	fallMenu.toggle('active');
+
+	if (h==0) {
+		document.getElementById('css13').style.background = 'red';
+		h = 1;
+	} else {
+		document.getElementById('css13').style.background = 'white';
+		h = 0;
+	}
+}*/
