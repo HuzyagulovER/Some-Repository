@@ -27,7 +27,7 @@
 	align-items: center;
 
 	transform-style: preserve-3d;
-	perspective: 600px;
+	perspective: 800px;
 
 
 }
@@ -41,6 +41,7 @@
 	border-radius: 5px;
 
 	padding: 10px 10px 7px 10px;
+	margin: 30px;
 }
 
 #css13 .open_fall_menu>.burger_line {
@@ -53,25 +54,58 @@
 
 #css13 .fall_menu {
 	width: calc(100vw/5);
-	height: calc(100vh/3);
+	max-width: 200px;
+	
 	border-radius: 20px;
 	background-color: #231d51;
-}
 
-#css13 .fall_menu {
 	transform-origin: center top;
-	transform: rotateX(86deg);
+	transform: rotateX(85deg);
 
 	opacity: 0;
 
 	transition: opacity 0.4s linear 0.4s, transform 0.8s cubic-bezier(0.68, -0.275, 0.825, 0.115) 0s;
+
+	padding: 0 5px;
+}
+
+#css13 .fall_menu .fall_menu_container {
+	width: 100%;
+	margin: 10px 0;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#css13 .fall_menu .fall_menu_container .fall_menu_container_title {
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0 0 5px;
+	text-align: center;
+}
+
+#css13 .fall_menu	.fall_menu_container a {
+	color: #7F35C9;
+	text-align: left;
+	margin: 7px;
+	width: 70%;
+
+}
+
+#css13 .fall_menu .fall_menu_container hr {
+	border-top: 1px solid #680099;
+
+	margin: 0;
+
+	width: 90%;
 }
 
 #css13 .fall_menu.active {
 	transform: rotateX(0deg);
 	opacity: 1;
 
-	transition: opacity 0.4s linear 0s, transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+	transition: opacity 0.4s linear 0s, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
 }
 
 @keyframes easeOutElastic {
