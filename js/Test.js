@@ -134,9 +134,15 @@ window.addEventListener('resize', function () {
 });
 
 let h = 0;
-document.getElementById('css13').addEventListener('click', function fallingMenu() {
+/*document.getElementById('css13').addEventListener('click', function fallingMenu() {
 	let fallMenu = this.lastElementChild.classList;
-	fallMenu.toggle('active');	
+	fallMenu.toggle('active');
+});
+*/
+document.querySelector('.open_fall_menu').addEventListener('click', function fallingMenu() {
+	console.log(this);
+	let fallMenu = this.nextElementSibling.classList;
+	fallMenu.toggle('active');
 });
 
 /*document.getElementsByClassName('open_fall_menu')[0].onclick = function () {
