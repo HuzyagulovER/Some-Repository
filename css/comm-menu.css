@@ -7,6 +7,7 @@
 	height: 200px;
 	width: 300px;
 	/*background: red;*/
+	z-index: 100;
 }
 
 #communicate-window.active {
@@ -29,8 +30,8 @@
 	writing-mode: vertical-lr;
 	text-orientation: mixed;
 
+	cursor: url('../img/cursor.png'), default;
 
-	cursor: url(C:\Users\mariy\Desktop\BB\Test_Repository\Some-Repository\img\cursor2.cur);
 }
 
 .communicate-caller p {

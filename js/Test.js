@@ -147,3 +147,16 @@ document.addEventListener('DOMContentLoaded', () => {
 document.querySelector('.communicate-caller').addEventListener('click', function () {
 	this.parentElement.classList.toggle('active');
 });
+
+// document.querySelector('.r-btn').addEventListener('click', function () {
+// 	this.previousElementSibling.firstElementChild.classList.toggle('active');
+// });
+
+
+let btn = document.getElementById('show');
+let nav = document.getElementById('nav');
+
+
+btn.addEventListener('click', function() {
+    nav.classList.toggle('active');
+});
