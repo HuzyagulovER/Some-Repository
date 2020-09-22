@@ -144,3 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 });
 
+document.querySelector('.communicate-caller').addEventListener('click', function () {
+	this.parentElement.classList.toggle('active');
+});

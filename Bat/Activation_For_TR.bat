@@ -34,7 +34,7 @@ if defined access (del access.txt & goto SYNC_ACT) else (goto Push_Or_Pull)
 	call :Colors "Green" "Black" "'						Welcome to Synchronization!						'"
 
 	cd ..
-	start "Activation" "C:\Program Files\Sublime Text 3\sublime_text.exe"
+	start "Activation" /max "C:\Program Files\Sublime Text 3\sublime_text.exe"
 	echo.
 	if errorlevel 1 (call :Colors "DarkRed" "Black" "'Ooops... Something goes wrong.'" & goto Exit)
  	cd Some-Repository/

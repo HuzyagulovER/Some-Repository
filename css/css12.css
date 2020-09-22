@@ -108,6 +108,40 @@
 	transition: opacity 0.4s linear 0s, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
 }
 
+
+
+#css14 {
+
+}
+
+.css14 .div-shape-outside {
+}
+
+/*#css14 .shape-outside {
+	float: left;
+	shape-outside: ellipse(closest-side closest-side at 25% 25%);
+	clip-path: ellipse(closest-side closest-side at 25% 25%);
+
+	width: 300px;
+	height: 500px;
+
+	background-color: #CF07F7FF;
+
+	margin-bottom: : 20px;
+
+}*/
+
+#css14 .shape-outside-2 {
+	float: left;
+	shape-outside: polygon(52px 30px, 119px 30px, 114px 150px, 85px 165px, 58px 150px);
+	clip-path: polygon(52px 30px, 119px 30px, 114px 150px, 85px 165px, 58px 150px);
+	shape-margin: 15px;
+	
+	width: 300px;
+	height: 300px;
+
+}
+
 @keyframes easeOutElastic {
 	0% {
 		transform: scale(1);

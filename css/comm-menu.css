@@ -1,0 +1,49 @@
+#communicate-window {
+	position: fixed;
+	display: inline-flex;
+	top: 40vh;
+	right: -260px;
+
+	height: 200px;
+	width: 300px;
+	/*background: red;*/
+}
+
+#communicate-window.active {
+	right: 0;
+}
+
+.communicate-caller {
+	position: relative;
+	width: 40px;
+	height: 70%;
+
+	background-color: #C33BBCFF;
+	
+	border-radius: 15px 0 0 15px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	writing-mode: vertical-lr;
+	text-orientation: mixed;
+
+
+	cursor: url(C:\Users\mariy\Desktop\BB\Test_Repository\Some-Repository\img\cursor2.cur);
+}
+
+.communicate-caller p {
+	transform-origin: center center;
+	transform: rotate(180deg);
+
+}
+
+.communicate-body {
+	width: calc(100% - 40px);
+	height: 200px;
+
+	background: #D8D8D8FF;
+
+	border-radius: 0 0 10px 10px;
+}

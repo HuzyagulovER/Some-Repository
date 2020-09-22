@@ -1,0 +1,11 @@
+.body {
+	position: relative;
+}
+.communicate-menu {
+	position: absolute;
+	top: 45vh;
+	right: 0;
+
+	height: 10vh;
+	width: 20vw;
+}
