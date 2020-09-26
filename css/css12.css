@@ -110,10 +110,10 @@
 
 
 
-#css14 {
-
+/*:selection {
+	background-color: chocolate;
 }
-
+*/
 .css14 .div-shape-outside {
 }
 
@@ -130,6 +130,22 @@
 	margin-bottom: 20px;
 
 }*/
+
+#css14 p {
+  quotes: "\201E" "\201C";
+}
+
+q:before{
+  content: open-quote;
+  color: blue;
+  margin-right: 10px;
+}
+
+q:after {
+  content: close-quote;
+  color: mediumvioletred;
+  margin-left: 10px;
+}
 
 #css14 .shape-outside-2 {
 	float: left;

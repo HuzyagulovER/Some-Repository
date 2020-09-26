@@ -160,3 +160,14 @@ let nav = document.getElementById('nav');
 btn.addEventListener('click', function() {
     nav.classList.toggle('active');
 });
+
+const cursors = document.querySelector('.cursors');
+document.addEventListener('mousemove', () => {
+	cursors.style.top = (event.pageY - 5) + 'px';
+	cursors.style.left = (event.pageX - 5) + 'px';
+
+});
+document.addEventListener('mousedown', () => {
+	cursors.classList.add('downed');
+	setTimeout("cursors.classList.remove('downed')", 500);
+});

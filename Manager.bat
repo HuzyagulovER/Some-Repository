@@ -17,7 +17,7 @@ call :Colors "Cyan" "black" "'						Welcome to Command Manager!						'"
 echo.
 
 :: Список доступных команд
-echo ^<Command list^>: act ^| push ^| pull ^| sync ^| restore ^| reload ^| exit
+echo ^<Command list^>: act ^| push ^| pull ^| sync ^| sass ^| restore ^| reload ^| exit
 
 :Loop
 	goto Manage_Menu
@@ -37,6 +37,7 @@ echo ^<Command list^>: act ^| push ^| pull ^| sync ^| restore ^| reload ^| exit
 	if /i %cmd%==push (start Bat\Push_For_TR.bat & goto Manage_Menu)
 	if /i %cmd%==pull (start Bat\Pull_For_TR.bat & goto Manage_Menu)
 	if /i %cmd%==sync (set access=sync & echo %access% > access.txt & start Bat\Activation_For_TR.bat & goto Manage_Menu)
+	if /i %cmd%==sass (start Bat\Sass_For_TR.bat & goto Manage_Menu)
 	if /i %cmd%==restore (goto Restore)
 	if /i %cmd%==exit (exit)
 	if /i %cmd%==reload (start Manager.bat & exit)
