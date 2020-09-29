@@ -171,3 +171,32 @@ document.addEventListener('mousedown', () => {
 	cursors.classList.add('downed');
 	setTimeout("cursors.classList.remove('downed')", 500);
 });
+
+const cursorToggler = document.querySelector('#cursor-toggler');
+cursorToggler.addEventListener('click', () => {
+	let cursorClassList = cursorToggler.classList[0];
+
+	if (cursorClassList == 'dot') {
+		cursorToggler.removeAttribute('class');
+		cursorToggler.classList.add('mouse');
+		var cursorClass = 'mouse';
+	} else {
+		cursorToggler.removeAttribute('class');
+		cursorToggler.classList.add('dot');
+		var cursorClass = 'dot';
+	};
+
+	if (cursorClass == 'dot') {
+		document.querySelector('style').innerHTML = '* {cursor: none !important}';
+		document.querySelector('.cursors').style.display = 'block';
+		document.querySelector('.fa-mouse-pointer').style.display = 'block';
+		document.querySelector('.fa-dot-circle').style.display = 'none';
+
+	} else {
+		document.querySelector('style').innerHTML = '* {cursor: default}';
+		document.querySelector('.cursors').style.display = 'none';
+		document.querySelector('.fa-dot-circle').style.display = 'block';
+		document.querySelector('.fa-mouse-pointer').style.display = 'none';
+
+	};
+});

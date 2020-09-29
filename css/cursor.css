@@ -28,10 +28,6 @@
 	opacity: .5;
 }
 
-* {
-	cursor: none !important;
-}
-
 .downed .cursor2 {
 	animation: clickAnim .5s both;
 }
@@ -77,4 +73,23 @@
 	100% {
 		transform: scale(1);
 	}
+}
+
+
+/*****			Cursor Toggler			*****/
+
+#cursor-toggler {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	z-index: 998;
+
+	width: 30px;
+	height: 30px;
+
+	font-size: 30px;
+}
+
+i[class*="fa-"] {
+	color: #fff;
 }

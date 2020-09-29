@@ -34,7 +34,14 @@
 
 
 
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/310dfa6f8e.js" crossorigin="anonymous"></script>
 
+		<style>
+			* {
+				cursor: none !important;
+			}
+		</style>
 
 		<style>
 			hr {
@@ -43,6 +50,7 @@
 			}
 			* {
 				font-family: sans-serif;
+				transition: all 0.8s ease 0s;
 			}
 
 			.red {
@@ -51,10 +59,6 @@
 
 			a {
 				cursor: pointer;
-			}
-
-			* {
-				transition: all 0.8s ease 0s;
 			}
 		</style>
 
@@ -67,6 +71,11 @@
 	</head>
 
 	<body onkeyup="hotkey(event)">
+
+		<div id="cursor-toggler" class="dot">
+			<i class="fas fa-mouse-pointer"></i>
+			<i class="far fa-dot-circle" style="display: none;"></i>
+		</div>
 
 		<div id="communicate-window">
 			<div class="communicate-caller"><p>Hey! Tap on me!</p></div>
@@ -231,10 +240,6 @@
 		</div>
 
 		<hr>
-
-		<div id="gif">
-			<img src="img/Pulse.gif" alt="SSS" class="gif" width="200px" height="200px">
-		</div>
 
 		<div class="cursors">
 			<div class="cursor"></div>
