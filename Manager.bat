@@ -1,6 +1,9 @@
 @echo off
 title Command Manager HuzyagulovER
 
+:REPOSITORY_NAME
+	for %%a in (".") do set repository_name=%%~na
+
 goto WITH_AUTHORIZATION
 
 :AUTHORIZATION_ERROR
@@ -13,7 +16,7 @@ goto WITH_AUTHORIZATION
 call :User_Check
 echo.
 
-call :Colors "Cyan" "black" "'						Welcome to Command Manager!						'"
+call :Colors "Cyan" "black" "'					Welcome to Command Manager For %repository_name%!					'"
 echo.
 
 :: Список доступных команд

@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		followedHrStyle.marginBottom = '8px';
 		followedHrStyle.width = '100%';
 	} else if (gotoFallMenuContainerFirstChild.tagName == 'HR') {
-		gotoFallMenuContainerFirstChild.style.display = 'none';
+		gotoFallMenuContainerFirstChild.style.displa3y = 'none';
 	};
 });
 
@@ -200,3 +200,6 @@ cursorToggler.addEventListener('click', () => {
 
 	};
 });
+
+new XMLHttpRequest();
+console.log(XMLHttpRequest().open);
