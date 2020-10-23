@@ -201,5 +201,18 @@ cursorToggler.addEventListener('click', () => {
 	};
 });
 
-new XMLHttpRequest();
-console.log(XMLHttpRequest().open);
+function loadFromTxt() {
+	let XMLHttp;
+
+	if (window.XMLHttpRequest) {
+		XMLHttp = new XMLHttpRequest();
+	} else {
+		XMLHttp = new ActiveXObject("Microsoft.XMLHTTP");
+	};
+
+	XMLHttp.open("GET", "../txt/ajax.txt", true);
+	XMLHttp.send();
+	XMLHttp.onreadystatechange = function () {
+		document.getElementById('ajax').firstElementChild.innerHTML = XMLHttp.responseText;
+	}
+}
