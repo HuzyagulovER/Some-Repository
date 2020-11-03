@@ -214,5 +214,35 @@ function loadFromTxt() {
 	XMLHttp.send();
 	XMLHttp.onreadystatechange = function () {
 		document.getElementById('ajax').firstElementChild.innerHTML = XMLHttp.responseText;
-	}
-}
+	};
+
+};
+
+
+
+let links = {
+	main: 'Main',
+	about: 'About',
+	downloads: 'Downloads'
+};
+
+let content = document.querySelector('.cont');
+let ul = document.querySelector('.history_api ul');
+
+ul.addEventListener('click', function(e) {
+	let state;
+	if (e.target.tagName != 'LI') return;
+	state = {page: e.target.dataset.href};
+	history.pushState(state, '', state.page);
+	updatestate(state);
+});
+
+function updatestate(state) {
+	if (!state) return;
+	content.innerHTML = links[state.page];
+};
+
+window.addEventListener('popstate', function (e) {
+	updatestate(e.state);
+	console.log(e.state);
+});

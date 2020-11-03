@@ -95,71 +95,10 @@ i[class*="fa-"] {
 }
 
 
-#test {
-	position: relative;
+.history_api {
+	margin: 50px;
 }
-.test1 {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
 
-	width: 100%;
-	height: 100px;
-
-	transition: z-index 1s ease 0s;
-	background-color: red;
-
-}
-.test1:hover {
-	z-index: 6;
-	transition: z-index 1s ease 0s;
-}
-.test2 {
-	position: absolute;
-	top: 0;
-	left: 20%;
-
-	width: 60%;
-	height: 100px;
-
-	background-color: blue;
-	z-index: 2;
-
-}
-.test3 {
-	position: absolute;
-	top: 0;
-	left: 40%;
-
-	width: 60%;
-	height: 100px;
-
-	background-color: #39CD31FF;
-	z-index: 3;
-
-}
-.test4 {
-	position: absolute;
-	top: 0;
-	left: 60%;
-
-	width: 60%;
-	height: 100px;
-
-	background-color: #D3CE2BFF;
-	z-index: 4;
-
-}
-.test5 {
-	position: absolute;
-	top: 0;
-	left: 80%;
-
-	width: 60%;
-	height: 100px;
-
-	background-color: #DE20D8FF;
-	z-index: 5;
-
+.history_api li {
+	margin: 10px;
 }
